@@ -1,26 +1,43 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #424242;
+  --secondary: rgb(124, 123, 123);
+  --container_background:white;
+  --body-background: rgb(196, 191, 186);
+  --shadow:0px 0px 5px rgb(0,0,0,0.3);
+  --inner-shadow:inset 0px 0px 5px rgb(0,0,0,0.2);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme:dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --primary: #ffffff;
+  --secondary: #c3c2c2;
+  --container_background:rgb(61, 60, 60);
+  --body-background: rgb(44, 40, 40);
+  --shadow:0px 0px 5px rgb(255,255,255,0.2);
+  --inner-shadow:inset 0px 0px 5px rgb(255, 255, 255,0.2);
   }
+}
+@theme inline {
+  --color-primary:var(--primary);
+  --color-secondary:var(--secondary);
+  --color-container:var(--container_background);
+  --shadow-custom:var(--shadow);
+  --shadow-inner:var(--inner-shadow);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--body-background);
+  min-height: 100vh;
+
+}
+#pattern-container{
+  opacity: 0.8;
+background-size: 10px 10px;
+background-image: repeating-linear-gradient(45deg, #787879 0, #979797 1px, #e5e5f7 0, #e5e5f7 50%);
+}
+
+html {
+  scroll-behavior: smooth;
 }
