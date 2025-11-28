@@ -42,7 +42,7 @@ export default () => {
       <div className="pt-1">
         <div className='px-5'>
         <div className='flex'>
-          <h1 className={`text-lg sm:text-4xl text-primary font-bold`}>Jitendra bhi</h1>
+          <h1 className={`text-lg sm:text-4xl text-primary font-bold`}>Jitendra Singh</h1>
           <div ref={roleScope} className=' text-[10px] sm:text-lg mt-auto mb-2 ml-2 rounded-sm sm:rounded-md shadow-custom  overflow-hidden'><motion.p initial={{opacity:0.5}} animate={{opacity:1}} transition={{duration:0.3}} className='text-secondary px-2'>{roles[role]}</motion.p></div>
         </div>
         <Desc/>
