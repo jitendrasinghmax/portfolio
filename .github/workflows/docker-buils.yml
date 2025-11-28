@@ -27,7 +27,6 @@ jobs:
           push: true
           tags: ${{secrets.DOCKER_USERNAME}}/portfolio-image:/next-app:${{github.sha}}
           cache: false
-      
       - name: Deploy to EC2 via SSH
         uses: appleboy/ssh-action@v1.2.0
         with:
